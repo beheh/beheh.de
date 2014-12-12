@@ -26,5 +26,6 @@
 				<?php if(file_exists('imprint.txt')) { echo file_get_contents('imprint.txt'); } ?>
 			</footer>
 		</div>
+		<?php if(file_exists('tracking.txt')) { echo file_get_contents('tracking.txt'); } ?>
 	</body>
 </html>
