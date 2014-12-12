@@ -18,7 +18,9 @@ body {
 }
 
 #background {
-	-webkit-filter: blur(15px);
+	filter: blur(6px);
+	-moz-filter: blur(6px);
+	-webkit-filter: blur(6px);
 	background-image: url('background.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
