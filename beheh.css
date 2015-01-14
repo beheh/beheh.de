@@ -1,3 +1,20 @@
+/* fonts by Fontfabric (http://www.fontfabric.com) */
+
+@font-face {
+    font-family: 'Nexa Rust Slab Black Shadow';
+    src: url('ttf/NexaRustSlab-BlackShadow01.otf');
+}
+
+@font-face {
+    font-family: 'Nexa Rust Sans Black';
+    src: url('ttf/NexaRustSans-Black.otf');
+}
+
+@font-face {
+    font-family: 'Nexa Rust Handmade Extended';
+    src: url('ttf/NexaRustHandmade-Extended.otf');
+}
+
 html, body, #background, #container  {
 	margin: 0;
 	padding: 0;
@@ -40,24 +57,20 @@ p {
 	display: inline-block;
 }
 
-@font-face {
-    font-family: 'Nexa Rust Sans Black';
-    src: url('ttf/NexaRustSans-Black.otf');
-}
-
 #lookatme {
 	font-size: 3em;
 	vertical-align: middle;
 	display: inline-block;
 	text-shadow: #000 1px 1px 4px;
-	font-family: 'Nexa Rust Sans Black', serif;
+	font-family: 'Nexa Rust Handmade Extended', serif;
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 1.3em;
 	font-weight: normal;
 	margin: 0;
 	line-height: 1em;
+	font-family: 'Nexa Rust Sans Black', serif;
 }
 
 @media (max-width: 768px){
@@ -88,13 +101,8 @@ footer#imprint {
 	font-size: 1em;
 }
 
-@font-face {
-    font-family: 'Nexa Rust Handmade Extended';
-    src: url('ttf/NexaRustHandmade-Extended.otf');
-}
-
 address {
 	font-style: normal;
-	font-family: 'Nexa Rust Handmade Extended', monospace;
+	font-family: monospace;
 	margin: 15px;
 }
