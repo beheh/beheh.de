@@ -5,7 +5,6 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="beheh.css">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="background"></div>

@@ -40,12 +40,17 @@ p {
 	display: inline-block;
 }
 
+@font-face {
+    font-family: 'Nexa Rust Sans Black';
+    src: url('ttf/NexaRustSans-Black.otf');
+}
+
 #lookatme {
 	font-size: 3em;
 	vertical-align: middle;
 	display: inline-block;
 	text-shadow: #000 1px 1px 4px;
-	font-family: 'Halant', serif;
+	font-family: 'Nexa Rust Sans Black', serif;
 }
 
 h1 {
@@ -83,8 +88,13 @@ footer#imprint {
 	font-size: 1em;
 }
 
+@font-face {
+    font-family: 'Nexa Rust Handmade Extended';
+    src: url('ttf/NexaRustHandmade-Extended.otf');
+}
+
 address {
 	font-style: normal;
-	font-family: monospace;
+	font-family: 'Nexa Rust Handmade Extended', monospace;
 	margin: 15px;
 }
