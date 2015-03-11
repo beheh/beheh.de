@@ -5,6 +5,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="beheh.css">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<?php if(file_exists('headers.txt')) { echo file_get_contents('headers.txt'); } ?>
 	</head>
 	<body>
 		<div id="background"></div>
