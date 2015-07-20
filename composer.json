@@ -1,0 +1,13 @@
+{
+    "name": "beheh/beheh.de",
+    "type": "project",
+    "require": {
+        "erusev/parsedown": "^1.5"
+    },
+    "authors": [
+        {
+            "name": "Benedict Etzel",
+            "email": "developer@beheh.de"
+        }
+    ]
+}
