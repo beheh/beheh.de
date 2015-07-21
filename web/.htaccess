@@ -1,6 +1,16 @@
-# Apache (.htaccess or httpd.conf)
-# Make sure AllowOverride is on for the directory, or put the rewrite rules in httpd.conf
-# http://httpd.apache.org/docs/2.0/mod/core.html#allowoverride
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . index.php [L] 
+RewriteEngine on
+
+# detect rewrite base
+RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+RewriteRule ^(.*) - [E=BASE:%1]
+
+# prevent duplicate content
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^index\.php(/(.*)|$) %{ENV:BASE}/$2 [R=301,L]
+
+# serve existing files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .? - [L]
+
+# rewrite all other queries to the front controller.
+RewriteRule .? %{ENV:BASE}/index.php [L]
