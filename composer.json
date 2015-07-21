@@ -2,12 +2,22 @@
     "name": "beheh/beheh.de",
     "type": "project",
     "require": {
-        "erusev/parsedown": "^1.5"
+        "league/flysystem": "^1.0",
+        "klein/klein": "^2.1",
+        "twig/twig": "^1.18",
+        "aptoma/twig-markdown": "^1.2",
+        "erusev/parsedown-extra": "^0.7.0",
+        "twig/extensions": "^1.2"
     },
     "authors": [
         {
             "name": "Benedict Etzel",
             "email": "developer@beheh.de"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "BehEh\\": "src/"
+        }
+    }
 }
