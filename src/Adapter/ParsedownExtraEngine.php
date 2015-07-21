@@ -20,7 +20,7 @@ class ParsedownExtraEngine implements MarkdownEngineInterface
      */
     public function transform($content)
     {
-        return ParsedownExtra::instance()->line($content);
+        return ParsedownExtra::instance()->text($content);
     }
 
     /**

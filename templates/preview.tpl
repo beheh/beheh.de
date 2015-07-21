@@ -1,6 +1,7 @@
 <article>
     <header>
-        <h1><a href="">{{title}}</a></h1>
+        {% if nicetime %}<time>{{nicetime}}</time>{% endif %}
+        <h1><a href="{{filename}}">{{title}}</a></h1>
     </header>
-        {{teaser|truncate(200, true, "&hellip; \[[weiterlesen](https://beheh.de)\].")|markdown}}
+    {{contents|truncate(200, true, "&hellip; \[[weiterlesen]("~ filename ~ ")\].")|markdown}}
 </article>
