@@ -142,11 +142,6 @@ h1 a, h1 a:active, h1 a:hover {
     }
 }
 
-p {
-    margin: 0;
-    padding: 0;
-}
-
 address {
     font-style: normal;
     font-family: monospace;
