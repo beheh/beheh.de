@@ -12,7 +12,7 @@
             <div id="background"></div>
             <div class="container">
                 <h1><a href="https://beheh.de">Benedict Etzel</a></h1>
-                <h2>Student an der Ostsee</h2>
+                <h2>{{catchphrase}}</h2>
             </div>
         </header>
         <div id="content">

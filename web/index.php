@@ -23,7 +23,6 @@ $atomTime = function($date) use ($parseTime) {
     return $parseTime($date)->format(DateTime::RFC3339);
 };
 
-
 // entry extraction
 $getEntries = function ($flysystem) use ($niceTime, $atomTime) {
     $entries = array();
@@ -64,6 +63,9 @@ $getEntries = function ($flysystem) use ($niceTime, $atomTime) {
 $twig = new Twig_Environment(new Twig_Loader_Filesystem('../templates'));
 $twig->addExtension(new Twig_Extensions_Extension_Text());
 $twig->addExtension(new MarkdownExtension(new ParsedownExtraEngine()));
+$twig->addGlobal('catchphrase', @file_get_contents('../catchphrase.txt'));
+$twig->addGlobal('headers', @file_get_contents('../headers.txt'));
+$twig->addGlobal('tracking', @file_get_contents('../tracking.txt'));
 
 // flysystem
 $flysystem = new \League\Flysystem\Adapter\Local(__DIR__.'/../contents');

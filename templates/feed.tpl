@@ -2,8 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Benedict Etzel</title>
     <link rel="self" href="https://beheh.de" />
-    <subtitle>Student an der Ostsee</subtitle>
-    <updated>2015-07-21T16:08:01+02:00</updated>
+    <subtitle>{{catchphrase}}</subtitle>
     <generator>beheh.de</generator>
     <id>https://beheh.de</id>
 {% for entry in entries %}
