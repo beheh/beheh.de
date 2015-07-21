@@ -76,7 +76,7 @@ $router = new League\Route\RouteCollection;
 $router->get('/', function(Request $request, Response $response) use ($twig, $flysystem, $getEntries) {
     $entries = $getEntries($flysystem);
 
-    $response->setContent($twig->render('index.tpl', array(
+    $response->setContent($twig->render('index.twig', array(
             'previews' => $entries
     )));
     return $response;
@@ -86,7 +86,7 @@ $router->get('/entries.xml', function(Request $request, Response $response) use 
     $entries = $getEntries($flysystem);
     $response->headers->set('Content-Type', 'application/atom+xml');
 
-    $response->setContent($twig->render('feed.tpl', array(
+    $response->setContent($twig->render('feed.twig', array(
             'entries' => $entries
     )));
     return $response;
@@ -111,7 +111,7 @@ $router->get('/{entry}.{extension}', function(Request $request, Response $respon
         $file = $flysystem->read($sourcefile);
         switch ($extension) {
             case 'html':
-                $response->setContent($twig->render('article.tpl', array(
+                $response->setContent($twig->render('article.twig', array(
                         'title' => trim(strtok($file['contents'], PHP_EOL), '# '),
                         'nicetime' => $niceTime($date),
                         'body' => trim(strstr($file['contents'], PHP_EOL))
@@ -129,7 +129,7 @@ $router->get('/{entry}.{extension}', function(Request $request, Response $respon
         $contents = $file['contents'];
         switch ($extension) {
             case 'html':
-                $response->setContent($twig->render('plain.tpl', array(
+                $response->setContent($twig->render('plain.twig', array(
                         'title' => trim(strtok($file['contents'], PHP_EOL), '# '),
                         'body' => trim(strstr($file['contents'], PHP_EOL))
                 )));
@@ -152,10 +152,10 @@ $request = Request::createFromGlobals();
 try {
     $response = $dispatcher->dispatch($request->getMethod(), $request->getPathInfo());
 } catch (NotFoundException $ex) {
-    $response = new Response($twig->render('404.tpl'), 404);
+    $response = new Response($twig->render('404.twig'), 404);
     $response->prepare($request);
 } catch (Exception $ex) {
-    $response = new Response($twig->render('500.tpl'), 500);
+    $response = new Response($twig->render('500.twig'), 500);
     $response->prepare($request);
     echo $ex;
 }

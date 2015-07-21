@@ -19,7 +19,7 @@
             {% block contents %}
             <div class="container">
                 {% for preview in previews %}
-                {% include 'preview.tpl' with {'filename': preview.filename, 'title': preview.title, 'contents': preview.contents, 'nicetime': preview.nicetime} %}
+                {% include 'preview.twig' with {'filename': preview.filename, 'title': preview.title, 'contents': preview.contents, 'nicetime': preview.nicetime} %}
                 {% else %}
                 <section>
                     <header>
