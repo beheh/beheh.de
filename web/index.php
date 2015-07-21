@@ -82,7 +82,7 @@ $router->get('/', function(Request $request, Response $response) use ($twig, $fl
     return $response;
 });
 
-$router->get('/entries.rss', function(Request $request, Response $response) use ($twig, $flysystem, $getEntries) {
+$router->get('/entries.xml', function(Request $request, Response $response) use ($twig, $flysystem, $getEntries) {
     $entries = $getEntries($flysystem);
     $response->headers->set('Content-Type', 'application/atom+xml');
 

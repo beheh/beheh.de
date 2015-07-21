@@ -35,7 +35,7 @@
             <div class="container">
                 <p class="obscured pull-right">
                     <a href="mailto:moin@beheh.de">moin@beheh.de</a> &middot;
-                    <a href="entries.rss">RSS</a> &middot;
+                    <a href="entries.xml">RSS</a> &middot;
                     <a href="https://github.com/beheh/beheh.de">Code</a> &middot;
                     <a hreF="imprint.html">Impressum</a></p>
                 <p>
