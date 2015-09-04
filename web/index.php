@@ -32,7 +32,7 @@ $getEntries = function ($flysystem) use ($niceTime, $atomTime) {
         return $entry['path'];
     }, $contents);
     array_multisort($filenames, SORT_DESC, $contents);
-    foreach ($flysystem->listContents() as $file) {
+    foreach ($contents as $file) {
         $components = explode('_', $file['path']);
 
         if (count($components) != 2) {
