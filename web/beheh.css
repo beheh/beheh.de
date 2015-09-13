@@ -107,9 +107,9 @@ header, footer, article, section {
     padding: 0;
 }
 
-
 article {
     margin: 45px 0 0 0;
+    line-height: 1.5em;
 }
 
 article:first-child {
