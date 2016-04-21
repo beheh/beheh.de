@@ -3,12 +3,12 @@
     "type": "project",
     "require": {
         "league/flysystem": "^1.0",
-        "twig/twig": "^1.18",
-        "aptoma/twig-markdown": "^1.2",
-        "erusev/parsedown-extra": "^0.7.0",
+        "twig/twig": "^1.24",
+        "aptoma/twig-markdown": "^2.0",
+        "erusev/parsedown-extra": "^0.7",
         "twig/extensions": "^1.2",
-        "league/route": "^1.1",
-        "symfony/http-foundation": "^2.7"
+        "league/route": "^1.0",
+        "symfony/http-foundation": "^2.6"
     },
     "authors": [
         {
