@@ -66,6 +66,7 @@ $twig->addExtension(new MarkdownExtension(new ParsedownExtraEngine()));
 $twig->addGlobal('catchphrase', @file_get_contents('../catchphrase.txt'));
 $twig->addGlobal('headers', @file_get_contents('../headers.txt'));
 $twig->addGlobal('tracking', @file_get_contents('../tracking.txt'));
+$twig->addGlobal('root', 'https://'.$_SERVER['SERVER_NAME']);
 
 // flysystem
 $flysystem = new \League\Flysystem\Adapter\Local(__DIR__.'/../contents');

@@ -7,7 +7,7 @@
             {% if nicetime %}<time>{{nicetime}}</time>{% endif %}
             <h1>{{title}}</h1>
         </header>
-        {{body|markdown}}
+        {{(body ~ "\n\n\[[Zurückgehen](" ~ root ~ ")\].")|markdown}}
     </article>
 </div>
 {% endblock %}
